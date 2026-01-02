@@ -1,1 +1,1 @@
-<a href="/www.utsrwr.xyz">© 2026 UTSRWR | All Rights Reserved</a>
+<a href="https://www.utsrwr.xyz">© 2026 UTSRWR | All Rights Reserved</a>

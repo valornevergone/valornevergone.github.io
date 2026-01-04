@@ -1,121 +1,318 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UTSRWR GIT</title>
-<style>
-  :root {
-    --primary: #2563eb;
-    --bg-gray: #f8fafc;
-    --text-dark: #1e293b;
-    --card-bg: #ffffff;
-  }
-  body { font-family: 'Segoe UI', sans-serif; background: var(--bg-gray); color: var(--text-dark); padding: 20px; margin: 0; }
-  .container { max-width: 1200px; margin: 0 auto; }
-  
-  /* Navigasi Atas */
-  .nav-box { background: white; padding: 20px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-  .nav-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-  .nav-links a { text-decoration: none; background: #eff6ff; color: var(--primary); padding: 8px 15px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: 0.2s; }
-  .nav-links a:hover { background: var(--primary); color: white; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildan Hidayat | utsrwr.xyz</title>
 
-  /* Grid Galeri */
-  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; transition: 0.3s; }
-  .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-  .card img { width: 100%; height: 200px; object-fit: cover; }
-  .card-body { padding: 15px; font-size: 13px; }
-  .card-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #0f172a; display: block; }
-  .meta-tag { color: #64748b; margin-bottom: 5px; display: block; }
-  .badge { display: inline-block; background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 5px; font-size: 11px; font-weight: 600; margin-top: 10px; }
-</style>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "wildan-hidayat-owner",
+      "contentUrl": "https://utsrwr.github.io/wildan-hidayat-owner.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "soto",
+      "contentUrl": "https://utsrwr.github.io/soto.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "sate",
+      "contentUrl": "https://utsrwr.github.io/sate.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "rendang",
+      "contentUrl": "https://utsrwr.github.io/rendang.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "pempek",
+      "contentUrl": "https://utsrwr.github.io/pempek.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "nasi-goreng",
+      "contentUrl": "https://utsrwr.github.io/nasi-goreng.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "gado-gado",
+      "contentUrl": "https://utsrwr.github.io/gado-gado.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "bakso",
+      "contentUrl": "https://utsrwr.github.io/bakso.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "10-makanan-populer-indonesia-viral",
+      "contentUrl": "https://utsrwr.github.io/10-makanan-populer-indonesia-viral.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "mie-aceh",
+      "contentUrl": "https://utsrwr.github.io/mie-aceh.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "makanan-tertua-di-indonesia-dan-dunia",
+      "contentUrl": "https://utsrwr.github.io/makanan-tertua-di-indonesia-dan-dunia.jpg",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "kuliner-menggrilla-sukabumi",
+      "contentUrl": "https://utsrwr.github.io/kuliner-menggrilla-sukabumi.jpg",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "ayam-betutu",
+      "contentUrl": "https://utsrwr.github.io/ayam-betutu.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageObject",
+      "name": "gudeg",
+      "contentUrl": "https://utsrwr.github.io/gudeg.png",
+      "license": "https://utsrwr.github.io/",
+      "acquireLicensePage": "https://utsrwr.github.io/",
+      "creditText": "Wildan Hidayat | utsrwr.xyz",
+      "copyrightNotice": "© Wildan Hidayat (utsrwr.xyz)",
+      "creator": { "@type": "Person", "name": "Wildan hidayat" }
+    }
+  ]
+  </script>
+
+  <style>
+    /* CSS untuk membuat tampilan Grid */
+    .gallery-container {
+      display: grid;
+      /* Membuat 3 kolom jika layar lebar, otomatis menyesuaikan jika layar kecil */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f9f9f9;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02); /* Efek sedikit membesar saat disentuh */
+    }
+
+    .gallery-item img {
+      width: 100%;
+      object-fit: cover; /* Agar foto tidak gepeng/lonjong */
+      display: block;
+    }
+
+    .gallery-item .info {
+      padding: 10px;
+    }
+
+    .gallery-item h3 {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .gallery-item p {
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <header style="text-align:center; margin-bottom:40px;">
-    <a href="https://www.utsrwr.xyz" style="color:#94a3b8; text-decoration:none; font-size:12px;">© 2026 UTSRWR | All Rights Reserved</a>
-  </header>
+  <h1 style="text-align:center;">Galeri Foto Berlisensi</h1>
 
-  <div id="nav-section" class="nav-box" style="display:none;">
-    <div style="font-weight:700; color:#475569;">📄 HALAMAN LAINNYA</div>
-    <div id="html-links" class="nav-links"></div>
-  </div>
-
-  <h2>🖼️ Galeri Visual Terverifikasi</h2>
-  <div id="gallery" class="gallery"></div>
-</div>
-
-<script>
-const settings = {
-  user: "utsrwr",
-  repo: "utsrwr.github.io",
-  branch: "main",
-  images: ["png", "jpg", "jpeg", "webp"],
-  ignore: ["index.html", "googlea89e0d505ac08048.html"],
-  defaultAuthor: "utsrwr.xyz",
-  defaultLocation: "Indonesia"
-};
-
-fetch(`https://api.github.com/repos/${settings.user}/${settings.repo}/contents/?ref=${settings.branch}`)
-  .then(res => res.json())
-  .then(files => {
-    const gallery = document.getElementById("gallery");
-    const htmlLinks = document.getElementById("html-links");
-    const navSection = document.getElementById("nav-section");
-    const today = new Date().toISOString().split('T')[0];
-
-    let hasPages = false;
-
-    files.forEach(file => {
-      const name = file.name;
-      const nameLower = name.toLowerCase();
-
-      // 1. Filter HTML (Kecuali index & google verif)
-      if (nameLower.endsWith(".html") && !settings.ignore.includes(nameLower)) {
-        hasPages = true;
-        const a = document.createElement("a");
-        a.href = name;
-        a.textContent = name.replace(".html", "").toUpperCase();
-        htmlLinks.appendChild(a);
-      }
-
-      // 2. Galeri dengan Metadata dari Nama File
-      if (settings.images.some(ext => nameLower.endsWith(ext))) {
-        
-        // --- LOGIKA EKSTRAKSI TANGGAL ---
-        // Mencari pola YYYY-MM-DD di awal nama file (cth: 2025-05-20-pantai.jpg)
-        const dateMatch = name.match(/^(\d{4}-\d{2}-\d{2})/);
-        const finalDate = dateMatch ? dateMatch[1] : today;
-        const cleanName = dateMatch ? name.replace(dateMatch[0] + "-", "").split(".")[0] : name.split(".")[0];
-
-        const card = document.createElement("div");
-        card.setAttribute("vocab", "https://schema.org/");
-        card.setAttribute("typeof", "ImageObject");
-        card.className = "card";
-
-        card.innerHTML = `
-          <img src="${file.download_url}" alt="${cleanName}" property="contentUrl">
-          <div class="card-body">
-            <span property="name" class="card-title">${cleanName.replace(/-/g, ' ')}</span>
-            <span class="meta-tag">👤 Creator: <span property="author">${settings.defaultAuthor}</span></span>
-            <span class="meta-tag">📍 Lokasi: <span property="contentLocation">${settings.defaultLocation}</span></span>
-            <span class="meta-tag">📅 Tanggal: ${finalDate}</span>
-            
-            <meta property="datePublished" content="${finalDate}">
-            <meta property="description" content="Foto ${cleanName} diunggah di ${settings.repo}">
-            
-            <div class="badge">✓ Licensable</div>
-          </div>
-        `;
-        gallery.appendChild(card);
-      }
-    });
-
-    if (hasPages) navSection.style.display = "block";
-  });
-</script>
-
+  <div class="gallery-container">
+    
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/wildan-hidayat-owner.png" alt="wildan-hidayat-owner">
+      <div class="info">
+        <h3>wildan-hidayat-owner</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/soto.png" alt="soto">
+      <div class="info">
+        <h3>soto</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/sate.png" alt="sate">
+      <div class="info">
+        <h3>sate</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/rendang.png" alt="rendang">
+      <div class="info">
+        <h3>rendang</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/pempek.png" alt="pempek">
+      <div class="info">
+        <h3>pempek</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/nasi-goreng.png" alt="nasi-goreng">
+      <div class="info">
+        <h3>nasi-goreng</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/mie-aceh.png" alt="mie-aceh">
+      <div class="info">
+        <h3>mie-aceh</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/makanan-tertua-di-indonesia-dan-dunia.jpg" alt="makanan-tertua-di-indonesia-dan-dunia">
+      <div class="info">
+        <h3>makanan-tertua-di-indonesia-dan-dunia</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/kuliner-menggrilla-sukabumi.jpg" alt="kuliner-menggrilla-sukabumi">
+      <div class="info">
+        <h3>kuliner-menggrilla-sukabumi</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/gado-gado.png" alt="gado-gado">
+      <div class="info">
+        <h3>gado-gado</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/bakso.png" alt="bakso">
+      <div class="info">
+        <h3>bakso</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/ayam-betutu.png" alt="ayam-betutu">
+      <div class="info">
+        <h3>ayam-betutu</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/gudeg.png" alt="gudeg">
+      <div class="info">
+        <h3>gudeg</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://utsrwr.github.io/10-makanan-populer-indonesia-viral.png" alt="10-makanan-populer-indonesia-viral">
+      <div class="info">
+        <h3>10-makanan-populer-indonesia-viral</h3>
+        <p>© Wildan Hidayat (utsrwr.xyz)</p>
+      </div>
+    </div>
+    
+    </div>
 </body>
 </html>

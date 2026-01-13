@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 150 }}">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1><a href="/">{{ site.title }}</a></h1>
+  <p>{{ site.description }}</p>
+</header>
+
+<main class="container">
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  © 2026 {{ site.title }} · GitHub Pages
+</footer>
+
+</body>
+</html>

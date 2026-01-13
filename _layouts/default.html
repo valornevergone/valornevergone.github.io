@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.excerpt | strip_html | truncate: 150 }}">
   <link rel="stylesheet" href="https://utsrwr.github.io/assets/style.css">
+  <head>
+  <meta charset="UTF-8">
+  <title>
+    {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="stylesheet" href="https://utsrwr.github.io/assets/style.css">
+</head>
 </head>
 <body>
 
@@ -21,6 +38,15 @@
 <footer class="site-footer">
   © 2026 {{ site.title }} · GitHub Pages
 </footer>
-
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.description }}"
+}
+</script>
 </body>
 </html>

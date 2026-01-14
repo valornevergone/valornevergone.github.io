@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- BASIC -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>
@@ -15,44 +13,26 @@
   </title>
 
   <meta name="description"
-        content="{% if page.excerpt %}
-                   {{ page.excerpt | strip_html | truncate: 160 }}
-                 {% else %}
-                   {{ site.description }}
-                 {% endif %}">
+        content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
 
-  <!-- CANONICAL -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-  <!-- OPEN GRAPH (WA / FB / TELEGRAM) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description"
-        content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image"
-        content="{{ site.url }}{{ page.thumbnail | default: '/assets/img/thumbnail.jpg' }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.thumbnail }}">
 
-  <!-- IMAGE SIZE RECOMMENDED -->
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- TWITTER / X -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description"
-        content="{{ page.excerpt | strip_html | truncate: 160 }}">
-  <meta name="twitter:image"
-        content="{{ site.url }}{{ page.thumbnail | default: '/assets/img/thumbnail.jpg' }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.thumbnail }}">
 
-  <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="/assets/style.css">
-
 </head>
+
 <body>
 
 <header class="site-header">
@@ -67,15 +47,6 @@
 <footer class="site-footer">
   © 2026 {{ site.title }} · GitHub Pages
 </footer>
-  
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "description": "{{ site.description }}"
-}
-</script>
+
 </body>
 </html>

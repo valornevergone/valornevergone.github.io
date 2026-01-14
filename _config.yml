@@ -3,20 +3,21 @@ description: Blog campuran kuliner, film, dan teknologi
 url: "https://utsrwr.github.io"
 baseurl: ""
 
+author:
+  name: UTSRWR
+
 permalink: /:year/:month/:title.html
 
 markdown: kramdown
 theme: null
 
-author:
-  name: UTSRWR
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
 
-compress_html:
-  clippings: all
+paginate: 6
+paginate_path: "/page/:num/"
 
 defaults:
   - scope:
@@ -25,7 +26,5 @@ defaults:
     values:
       thumbnail: /assets/img/default.jpg
 
-paginate: 6
-paginate_path: "/page/:num/"
-plugins:
-  - jekyll-paginate
+sass:
+  style: compressed

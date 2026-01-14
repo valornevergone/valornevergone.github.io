@@ -17,3 +17,15 @@ plugins:
 
 compress_html:
   clippings: all
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      thumbnail: /assets/img/default.jpg
+
+paginate: 6
+paginate_path: "/page/:num/"
+plugins:
+  - jekyll-paginate

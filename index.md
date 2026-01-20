@@ -8,7 +8,7 @@ title: Beranda
     <div class="card">
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p><small>{{ post.date | date: "%d %B %Y" }}</small></p>
-      <p>{{ page.description | strip_html | truncate: 100 }}</p>
+      <p>{{ post.description | strip_html | truncate: 100 }}</p>
       <p><a href="{{ post.url | relative_url }}">Selengkapnya</a></p>
     </div>
   {% endfor %}

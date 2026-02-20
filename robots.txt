@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://utsrwr.github.io/sitemap.xml
+Sitemap: https://vng.my.id/sitemap.xml

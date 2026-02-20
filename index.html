@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNG My Identity Defined</title>
+  <meta name="description" content="Official biolink VNG – Valor Never Gone." />
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --accent: #00ffd5;
+      --card-bg: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.15);
+      --text-main: #fff;
+      --text-muted: #b5b5b5;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("https://vng.my.id/bgvalornevergone.png") center / cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      color: var(--text-main);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: -1;
+    }
+
+    body.fullscreen::before {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    /* ================= CARD ================= */
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px 20px;
+      transition: all 0.5s ease;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* iOS Handle */
+    .ios-handle {
+      width: 38px;
+      height: 5px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 999px;
+      margin: 0 auto 14px;
+    }
+
+    /* FULLSCREEN MODE */
+    .card.fullscreen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      max-width: none;
+      border-radius: 0;
+      padding-top: 36px;
+      overflow-y: auto;
+      z-index: 999;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ================= PROFILE ================= */
+    .profile {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 14px;
+      filter: brightness(0.85) blur(1px);
+      transition: 0.4s ease;
+      box-shadow: 0 0 20px rgba(0,255,213,0.4);
+      cursor: pointer;
+    }
+
+    .avatar:hover {
+      filter: brightness(1) blur(0);
+      transform: scale(1.08);
+    }
+
+    .card.fullscreen .avatar {
+      width: 120px;
+      height: 120px;
+    }
+
+    .name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .username {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .bio {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* ================= LINKS ================= */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .link-btn {
+      position: relative;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .link-btn i {
+      color: var(--accent);
+      width: 20px;
+      text-align: center;
+    }
+
+    .link-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(0,255,213,0.2), transparent);
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .link-btn:hover::before {
+      opacity: 1;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(0,255,213,0.3);
+    }
+
+    .link-btn:active {
+      transform: scale(0.97);
+    }
+
+    .card.fullscreen .link-btn {
+      padding: 16px 18px;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+      letter-spacing: 0.4px;
+    }
+
+    /* MOBILE SMALL */
+    @media (max-width: 360px) {
+      .card { padding: 22px 16px; }
+      .name { font-size: 1.1rem; }
+      .link-btn { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="ios-handle"></div>
+
+    <div class="profile">
+      <img src="https://vng.my.id/icvalornevergone.png" class="avatar" alt="Avatar">
+      <div class="name">Valor Never Gone</div>
+      <div class="username">https://vng.my.id</div>
+      <div class="bio">
+        <b>VALOR NEVER GONE<br>My Identity Defined</b>
+        <br><br>Cari produk terbaik, terkurasi, dan terbukti laris?
+        <br>Semua ada di vng.my.id 💎
+        <br><br>Kami adalah usaha affiliate terpercaya yang fokus hanya merekomendasikan produk berkualitas, bukan asal jual.
+        <br>✔️ Dipilih dengan riset
+        <br>✔️ Review jujur & real
+        <br>✔️ Harga worth it
+        <br>✔️ Cocok buat kebutuhan harian sampai lifestyle
+        <br><br>⚔️ Valor Never Gone — kualitas bukan tren sesaat
+        <br>🛡️ My Identity Defined — pilihanmu mencerminkan standar hidupmu
+        <br><br>👉 Jangan buang waktu cari yang abal-abal
+        <br>👉 Klik, pilih, dan rasakan bedanya
+        <br><br>🌐 vng.my.id
+        <br>Tempat di mana kualitas, kepercayaan, dan identitas bertemu.
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="#" class="link-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#" class="link-btn"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#" class="link-btn"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="#" class="link-btn"><i class="fab fa-youtube"></i> YouTube</a>
+      <a href="#" class="link-btn"><i class="fas fa-link"></i> Valor Never Gone</a>
+    </div>
+
+    <div class="footer">
+      © 2026 VNG.MY.ID • All Rights Reserved
+    </div>
+  </div>
+
+  <script>
+    const card = document.querySelector('.card');
+    const avatar = document.querySelector('.avatar');
+    let startY = 0;
+
+    avatar.addEventListener('click', toggleFullscreen);
+
+    function toggleFullscreen() {
+      card.classList.toggle('fullscreen');
+      document.body.classList.toggle('fullscreen');
+    }
+
+    card.addEventListener('touchstart', e => {
+      startY = e.touches[0].clientY;
+    });
+
+    card.addEventListener('touchend', e => {
+      const endY = e.changedTouches[0].clientY;
+      const diff = startY - endY;
+
+      if (diff > 80 && !card.classList.contains('fullscreen')) toggleFullscreen();
+      if (diff < -80 && card.classList.contains('fullscreen')) toggleFullscreen();
+    });
+  </script>
+
+</body>
+</html>
